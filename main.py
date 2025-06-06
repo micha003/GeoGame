@@ -113,8 +113,13 @@ class KartenGUI(Tk):
         """
         clickX = self.canBild.canvasx(event.x)
         clickY = self.canBild.canvasy(event.y)
-
-        ####### Hier muss noch wenig programmiert werden
+        
+        # Convert pixel coordinates to geo coordinates
+        geoX = InGeoX(self.bgBild, clickX)
+        geoY = InGeoY(self.bgBild, clickY)
+        
+        # Update the position label
+        self.lblPosition.config(text=f"Position: {geoY:.2f}°N, {geoX:.2f}°E")
 
 
 
