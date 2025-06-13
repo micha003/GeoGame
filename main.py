@@ -127,6 +127,11 @@ class KartenGUI(Tk):
     """
 
     def btnKlick(self, event):
+        # Check if game is over
+        if self.aktuelle_runde > self.rundenanzahl:
+            print(f"Spiel beendet! Endpunktestand: {self.punkte}")
+            return
+
         self.aktuelle_stadt = self.staedte[self.aktuelle_runde - 1]
 
         stadt_x = self.aktuelle_stadt[3]
