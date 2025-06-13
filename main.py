@@ -120,7 +120,12 @@ class KartenGUI(Tk):
         return r.sample(staedte, anzahl)
 
     def punktevergabe(self, x, y, stadt_x, stadt_y) -> int:
-        return int()
+        # Berechnung der Distanz zwischen dem Spielertipp und der tatsächlichen Stadt
+        distanz = sqrt((x - stadt_x) ** 2 + (y - stadt_y) ** 2)
+        # Umrechnung der Distanz in Punkte
+        # Maximale Anzahl 5 Tausend Punkte
+        punkte = round(5000 / (distanz + 1))
+        return punkte
 
     """
        btnKlick: Spielmethode
