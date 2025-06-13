@@ -67,6 +67,12 @@ class KartenGUI(Tk):
 
     def __init__(self, Datei, Fensterbreite=1000, Fensterhoehe=600):
 
+        # ✨✨✨SPIEL-LOGIK✨✨✨
+        self.rundenanzahl = 7
+        self.punkte = 0
+        self.staedte = self.staedte_selection(self.rundenanzahl)
+        self.aktuelle_runde = 1
+
         # GUI-Definition
         # ==============
         Tk.__init__(self)  # TK-Konstruktor der Vaterklasse aufrufen
@@ -89,8 +95,8 @@ class KartenGUI(Tk):
         self.canBild.config(xscrollcommand=self.sbarx.set)
         self.canBild.bind('<Button-1>', self.btnKlick)
 
-        self.lblPosition = Label(self, text="Position: ")
-        self.lblPosition.grid(column=0, row=0, sticky=E)
+        self.lblStadt = Label(self, text="Stadt: ")
+        self.lblStadt.grid(column=0, row=0, sticky=E)
 
         self.btnClose = Button(self, text="Ende")
         self.btnClose.bind("<Button-1>", self.btnCloseClick)
@@ -103,12 +109,6 @@ class KartenGUI(Tk):
         # Fenster darf nicht in der Größe geändert werden.
         # Veränderbare Fenster sind deutlich komplizierter zu bauen (vor allem durch die Scrollbars)
         self.resizable(0, 0)
-
-        # ✨✨✨SPIEL-LOGIK✨✨✨
-        self.rundenanzahl = 7
-        self.punkte = 0
-        self.staedte = self.staedte_selection(self.rundenanzahl)
-        self.aktuelle_runde = 1
 
     def btnCloseClick(self, event):
         self.destroy()
@@ -127,12 +127,19 @@ class KartenGUI(Tk):
     """
 
     def btnKlick(self, event):
+
+        self.lblRunde = Label(self, text=f'Runde: {self.aktuelle_runde}')
+        self.lblRunde.grid(column=4, row=0, sticky=E)
+
         # Check if game is over
         if self.aktuelle_runde > self.rundenanzahl:
             print(f"Spiel beendet! Endpunktestand: {self.punkte}")
             return
 
         self.aktuelle_stadt = self.staedte[self.aktuelle_runde - 1]
+
+        self.lblAktuelleStadt = Label(self, text=f'{self.aktuelle_stadt[0]}')
+        self.lblAktuelleStadt.grid(column=1, row=0, sticky=E)
 
         stadt_x = self.aktuelle_stadt[3]
         stadt_y = self.aktuelle_stadt[4]
@@ -145,10 +152,13 @@ class KartenGUI(Tk):
         geoY = InGeoY(self.bgBild, clickY)
 
         self.punkte += self.punktevergabe(geoX, geoY, stadt_x, stadt_y)
-        # TODO: Display Punkte
-        # TODO: Display Stadtname
-        # TODO: Display Runde
-        # TODO: Display Punktestand
+
+        self.lblPunkte = Label(self, text=f"Punkte: {self.punkte}")
+        self.lblPunkte.grid(column=6, row=0, sticky=E)
+        # TODO: Display Punkte ✅
+        # TODO: Display Stadtname ✅
+        # TODO: Display Runde ✅
+        # TODO: Display Punktestand ✅
 
         self.aktuelle_runde += 1
 
