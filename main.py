@@ -2,8 +2,11 @@
 
 # Importiere alles aus der tkInter-Bibliothek (Oberfläche)
 from tkinter import *
+from tkinter import simpledialog
 import sqlite3
 import pandas as pd
+from pathlib import Path
+import json
 
 # Random für die Zufallszahlen
 import random as r
@@ -99,12 +102,13 @@ class KartenGUI(Tk):
         self.lblStadt.grid(column=0, row=0, sticky=E)
 
         # Initialize game info labels
-        self.lblAktuelleStadt = Label(self, text=f"{self.staedte[0][0]}")  # Show first city
+        self.lblAktuelleStadt = Label(
+            self, text=f"{self.staedte[0][0]}")  # Show first city
         self.lblAktuelleStadt.grid(column=1, row=0, sticky=E)
-        
+
         self.lblRunde = Label(self, text=f"Runde: {self.aktuelle_runde}")
         self.lblRunde.grid(column=4, row=0, sticky=E)
-        
+
         self.lblPunkte = Label(self, text=f"Punkte: {self.punkte}")
         self.lblPunkte.grid(column=6, row=0, sticky=E)
 
@@ -126,12 +130,29 @@ class KartenGUI(Tk):
 # ---------------------------------------------------------------------------
 # ✨✨✨Spiel-Logik✨✨✨ (part 2 eigentlich)
 
+    def ask_username(self):
+        # Create a popup dialog to ask for user input
+        user_input = simpledialog.askstring("Spitzname", "EINGEBEN")
+
+        # Check if the user provided input
+        if user_input is not None:
+            nickname = user_input
+            return nickname
+        else:
+            print("User  cancelled the input.")
+            exit(-1)
+
+    def highscore(self, nickname, punkte):
+        with open("highscore.json", "w") as file:
+            highscore[nickname] = punkte
+            json.dump(highscore, file)
+
     def staedte_selection(self, anzahl):
         return r.sample(staedte, anzahl)
 
     def punktevergabe(self, x, y, stadt_x, stadt_y) -> int:
         # Berechnung der Distanz zwischen dem Spielertipp und der tatsächlichen Stadt
-        distanz = sqrt((x - stadt_x) ** 2 + (y - stadt_y) ** 2)
+        distanz = sqrt((x - stadt_x)**2 + (y - stadt_y)**2)
         # Umrechnung der Distanz in Punkte
         # Maximale Anzahl 5 Tausend Punkte
         punkte = round(5000 / (distanz + 1))
@@ -145,6 +166,8 @@ class KartenGUI(Tk):
         # Check if game is over
         if self.aktuelle_runde > self.rundenanzahl:
             print(f"Spiel beendet! Endpunktestand: {self.punkte}")
+            self.nickname = self.ask_username()
+            self.highscore(self.nickname, self.punkte)
             return
 
         self.aktuelle_stadt = self.staedte[self.aktuelle_runde - 1]
@@ -172,14 +195,24 @@ class KartenGUI(Tk):
 
         # Draw markers with tags for easy deletion
         # Green circle for correct city position (larger)
-        self.canBild.create_oval(city_pixel_x - 8, city_pixel_y - 8, 
-                                city_pixel_x + 8, city_pixel_y + 8, 
-                                fill="green", outline="darkgreen", width=2, tags="marker")
+        self.canBild.create_oval(city_pixel_x - 8,
+                                 city_pixel_y - 8,
+                                 city_pixel_x + 8,
+                                 city_pixel_y + 8,
+                                 fill="green",
+                                 outline="darkgreen",
+                                 width=2,
+                                 tags="marker")
 
         # Red circle for player guess (smaller)
-        self.canBild.create_oval(clickX - 5, clickY - 5, 
-                                clickX + 5, clickY + 5, 
-                                fill="red", outline="darkred", width=2, tags="marker")
+        self.canBild.create_oval(clickX - 5,
+                                 clickY - 5,
+                                 clickX + 5,
+                                 clickY + 5,
+                                 fill="red",
+                                 outline="darkred",
+                                 width=2,
+                                 tags="marker")
 
         self.punkte += self.punktevergabe(geoX, geoY, stadt_x, stadt_y)
 
@@ -194,6 +227,19 @@ class KartenGUI(Tk):
             self.lblAktuelleStadt.config(text=f'{next_city[0]}')
             self.lblRunde.config(text=f'Runde: {self.aktuelle_runde}')
 
+
+# ---------------------------------------------------------------------------
+# ✈✈✈ EXECUTION ✈✈✈
+
+if Path("highscore.json").exists():
+    with open("highscore.json", "r") as file:
+        highscore = json.load(file)
+        print("Highscore geladen")
+else:
+    with open("highscore.json", "w") as file:
+        highscore = {}
+        json.dump(highscore, file)
+        print("Highscore-Liste erstellt")
 
 # Erzeuge Fenster
 app = KartenGUI(Datei="DeutschlandFlussKleiner.gif",

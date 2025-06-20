@@ -161,3 +161,4 @@ cython_debug/
 
 # DB stuff
 sql_micha.db
+highscore.json
