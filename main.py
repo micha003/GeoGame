@@ -147,6 +147,14 @@ class KartenGUI(Tk):
             highscore[nickname] = punkte
             json.dump(highscore, file)
 
+    def showHighscore(self):
+        with open("highscore.json", "r") as file:
+            highscore = json.load(file)
+            print("Highscore geladen")
+            top5 = []
+            for key, value in highscore.items():
+                
+
     def staedte_selection(self, anzahl):
         return r.sample(staedte, anzahl)
 
