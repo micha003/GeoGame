@@ -99,7 +99,7 @@ class KartenGUI(Tk):
         self.lblStadt.grid(column=0, row=0, sticky=E)
 
         # Initialize game info labels
-        self.lblAktuelleStadt = Label(self, text="")
+        self.lblAktuelleStadt = Label(self, text=f"{self.staedte[0][0]}")  # Show first city
         self.lblAktuelleStadt.grid(column=1, row=0, sticky=E)
         
         self.lblRunde = Label(self, text=f"Runde: {self.aktuelle_runde}")
