@@ -159,6 +159,38 @@ class KartenGUI(Tk):
             top5 = sorted_scores[:5]
             
             return top5
+
+    def display_top5(self):
+        """Display the top 5 high scores in a new window"""
+        top5 = self.getTOP5()
+        
+        # Create a new window for the high scores
+        highscore_window = Toplevel(self)
+        highscore_window.title("Top 5 High Scores")
+        highscore_window.geometry("300x250")
+        highscore_window.resizable(False, False)
+        
+        # Title label
+        title_label = Label(highscore_window, text="🏆 TOP 5 HIGH SCORES 🏆", 
+                           font=("Arial", 14, "bold"))
+        title_label.pack(pady=10)
+        
+        # Display each score
+        if top5:
+            for i, (name, score) in enumerate(top5, 1):
+                score_text = f"{i}. {name}: {score} Punkte"
+                score_label = Label(highscore_window, text=score_text, 
+                                   font=("Arial", 10))
+                score_label.pack(pady=5)
+        else:
+            no_scores_label = Label(highscore_window, text="Noch keine Scores vorhanden!", 
+                                   font=("Arial", 10))
+            no_scores_label.pack(pady=20)
+        
+        # Close button
+        close_button = Button(highscore_window, text="Schließen", 
+                             command=highscore_window.destroy)
+        close_button.pack(pady=20)
                 
 
     def staedte_selection(self, anzahl):
@@ -182,7 +214,7 @@ class KartenGUI(Tk):
             print(f"Spiel beendet! Endpunktestand: {self.punkte}")
             self.nickname = self.ask_username()
             self.highscore(self.nickname, self.punkte)
-            self.top5 = self.getTOP5()
+            self.display_top5()
             
             return
 
