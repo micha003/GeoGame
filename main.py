@@ -147,7 +147,7 @@ class KartenGUI(Tk):
             highscore[nickname] = punkte
             json.dump(highscore, file)
 
-    def showHighscore(self):
+    def getTOP5(self):
         with open("highscore.json", "r") as file:
             highscore = json.load(file)
             print("Highscore geladen")
@@ -182,6 +182,8 @@ class KartenGUI(Tk):
             print(f"Spiel beendet! Endpunktestand: {self.punkte}")
             self.nickname = self.ask_username()
             self.highscore(self.nickname, self.punkte)
+            self.top5 = self.getTOP5()
+            
             return
 
         self.aktuelle_stadt = self.staedte[self.aktuelle_runde - 1]
