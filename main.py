@@ -163,20 +163,23 @@ class KartenGUI(Tk):
         geoX = InGeoX(self.bgBild, clickX)
         geoY = InGeoY(self.bgBild, clickY)
 
+        # Clear previous markers (keep only the background image)
+        self.canBild.delete("marker")
+
         # Convert city coordinates to pixel coordinates for drawing
         city_pixel_x = InPixelWO(self.bgBild, stadt_x)
         city_pixel_y = InPixelNS(self.bgBild, stadt_y)
 
-        # Draw markers
+        # Draw markers with tags for easy deletion
         # Green circle for correct city position (larger)
         self.canBild.create_oval(city_pixel_x - 8, city_pixel_y - 8, 
                                 city_pixel_x + 8, city_pixel_y + 8, 
-                                fill="green", outline="darkgreen", width=2)
+                                fill="green", outline="darkgreen", width=2, tags="marker")
 
         # Red circle for player guess (smaller)
         self.canBild.create_oval(clickX - 5, clickY - 5, 
                                 clickX + 5, clickY + 5, 
-                                fill="red", outline="darkred", width=2)
+                                fill="red", outline="darkred", width=2, tags="marker")
 
         self.punkte += self.punktevergabe(geoX, geoY, stadt_x, stadt_y)
 
