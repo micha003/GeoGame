@@ -170,6 +170,12 @@ class KartenGUI(Tk):
 
         self.aktuelle_runde += 1
 
+        # Display the next city name if there are more rounds
+        if self.aktuelle_runde <= self.rundenanzahl:
+            next_city = self.staedte[self.aktuelle_runde - 1]
+            self.lblAktuelleStadt.config(text=f'{next_city[0]}')
+            self.lblRunde.config(text=f'Runde: {self.aktuelle_runde}')
+
 
 # Erzeuge Fenster
 app = KartenGUI(Datei="DeutschlandFlussKleiner.gif",
