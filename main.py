@@ -151,8 +151,14 @@ class KartenGUI(Tk):
         with open("highscore.json", "r") as file:
             highscore = json.load(file)
             print("Highscore geladen")
-            top5 = []
-            for key, value in highscore.items():
+            
+            # Convert dictionary to list of tuples (name, score) and sort by score (descending)
+            sorted_scores = sorted(highscore.items(), key=lambda x: x[1], reverse=True)
+            
+            # Take top 5 (or less if not enough scores)
+            top5 = sorted_scores[:5]
+            
+            return top5
                 
 
     def staedte_selection(self, anzahl):
