@@ -98,6 +98,16 @@ class KartenGUI(Tk):
         self.lblStadt = Label(self, text="Stadt: ")
         self.lblStadt.grid(column=0, row=0, sticky=E)
 
+        # Initialize game info labels
+        self.lblAktuelleStadt = Label(self, text="")
+        self.lblAktuelleStadt.grid(column=1, row=0, sticky=E)
+        
+        self.lblRunde = Label(self, text=f"Runde: {self.aktuelle_runde}")
+        self.lblRunde.grid(column=4, row=0, sticky=E)
+        
+        self.lblPunkte = Label(self, text=f"Punkte: {self.punkte}")
+        self.lblPunkte.grid(column=6, row=0, sticky=E)
+
         self.btnClose = Button(self, text="Ende")
         self.btnClose.bind("<Button-1>", self.btnCloseClick)
         self.btnClose.grid(column=3, row=0, sticky=E)
@@ -132,10 +142,6 @@ class KartenGUI(Tk):
     """
 
     def btnKlick(self, event):
-
-        self.lblRunde = Label(self, text=f'Runde: {self.aktuelle_runde}')
-        self.lblRunde.grid(column=4, row=0, sticky=E)
-
         # Check if game is over
         if self.aktuelle_runde > self.rundenanzahl:
             print(f"Spiel beendet! Endpunktestand: {self.punkte}")
@@ -143,8 +149,9 @@ class KartenGUI(Tk):
 
         self.aktuelle_stadt = self.staedte[self.aktuelle_runde - 1]
 
-        self.lblAktuelleStadt = Label(self, text=f'{self.aktuelle_stadt[0]}')
-        self.lblAktuelleStadt.grid(column=1, row=0, sticky=E)
+        # Update label text instead of creating new labels
+        self.lblRunde.config(text=f'Runde: {self.aktuelle_runde}')
+        self.lblAktuelleStadt.config(text=f'{self.aktuelle_stadt[0]}')
 
         stadt_x = self.aktuelle_stadt[3]
         stadt_y = self.aktuelle_stadt[4]
@@ -158,12 +165,8 @@ class KartenGUI(Tk):
 
         self.punkte += self.punktevergabe(geoX, geoY, stadt_x, stadt_y)
 
-        self.lblPunkte = Label(self, text=f"Punkte: {self.punkte}")
-        self.lblPunkte.grid(column=6, row=0, sticky=E)
-        # TODO: Display Punkte ✅
-        # TODO: Display Stadtname ✅
-        # TODO: Display Runde ✅
-        # TODO: Display Punktestand ✅
+        # Update points label
+        self.lblPunkte.config(text=f"Punkte: {self.punkte}")
 
         self.aktuelle_runde += 1
 
