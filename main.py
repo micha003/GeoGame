@@ -171,7 +171,7 @@ class KartenGUI(Tk):
         highscore_window.resizable(False, False)
         
         # Title label
-        title_label = Label(highscore_window, text="🏆 TOP 5 HIGH SCORES 🏆", 
+        title_label = Label(highscore_window, text="! TOP 5 HIGH SCORES !", 
                            font=("Arial", 14, "bold"))
         title_label.pack(pady=10)
         
@@ -190,11 +190,23 @@ class KartenGUI(Tk):
         # Close button
         close_button = Button(highscore_window, text="Schließen", 
                              command=highscore_window.destroy)
-        close_button.pack(pady=20)
+        close_button.pack(pady=10)
+
+    def has_duplicates(input_list):
+        seen = set()
+        for item in input_list:
+            if item in seen:
+                return True  # Duplicate found
+            seen.add(item)
+        return False  # No duplicates found
                 
 
     def staedte_selection(self, anzahl):
-        return r.sample(staedte, anzahl)
+        s = r.sample(staedte, anzahl)
+        # Damit Herr Debray nächstes Mal eine Chance hat ;)
+        if self.has_duplicates(s):
+            return self.staedte_selection(anzahl)
+        return s
 
     def punktevergabe(self, x, y, stadt_x, stadt_y) -> int:
         # Berechnung der Distanz zwischen dem Spielertipp und der tatsächlichen Stadt
@@ -209,15 +221,6 @@ class KartenGUI(Tk):
     """
 
     def btnKlick(self, event):
-        # Check if game is over
-        if self.aktuelle_runde > self.rundenanzahl:
-            print(f"Spiel beendet! Endpunktestand: {self.punkte}")
-            self.nickname = self.ask_username()
-            self.highscore(self.nickname, self.punkte)
-            self.display_top5()
-            
-            return
-
         self.aktuelle_stadt = self.staedte[self.aktuelle_runde - 1]
 
         # Update label text instead of creating new labels
@@ -274,6 +277,15 @@ class KartenGUI(Tk):
             next_city = self.staedte[self.aktuelle_runde - 1]
             self.lblAktuelleStadt.config(text=f'{next_city[0]}')
             self.lblRunde.config(text=f'Runde: {self.aktuelle_runde}')
+
+        # Check if game is over
+        if self.aktuelle_runde > self.rundenanzahl:
+            print(f"Spiel beendet! Endpunktestand: {self.punkte}")
+            self.nickname = self.ask_username()
+            self.highscore(self.nickname, self.punkte)
+            self.display_top5()
+
+            return
 
 
 # ---------------------------------------------------------------------------
