@@ -192,9 +192,9 @@ class KartenGUI(Tk):
                              command=highscore_window.destroy)
         close_button.pack(pady=10)
 
-    def has_duplicates(input_list):
+    def has_duplicates(self, l):
         seen = set()
-        for item in input_list:
+        for item in l:
             if item in seen:
                 return True  # Duplicate found
             seen.add(item)
