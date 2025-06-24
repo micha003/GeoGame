@@ -3,9 +3,6 @@
 # Importiere alles aus der tkInter-Bibliothek (Oberfläche)
 from tkinter import *
 from tkinter import simpledialog
-import sqlite3
-import pandas as pd
-from pathlib import Path
 import json
 
 # Random für die Zufallszahlen
@@ -14,14 +11,16 @@ import random as r
 # math für spezielle trigonometrische Funktionen (Entfernungsberechnung)
 from math import *
 
-connection = sqlite3.connect("sql_micha.db")
+# ⛔ IT DOES NOT FOR WORK ⛔
+with open('db.json', 'r') as file:
+    # Read the file contents
+    contents = file.read()
 
-zuDB = pd.read_csv('ort.csv')
-zuDB.to_sql('ort', connection, if_exists='append', index=False)
+db = json.loads(contents)
 
-cursor = connection.cursor()
-
-staedte = cursor.execute("SELECT * FROM ORT").fetchall()
+# Now you can access the 'staedte' key from the dictionary
+staedte = db["staedte"]
+highscore = db["highscore"]
 
 cNord = 55.1
 cSued = 47.2
@@ -144,12 +143,13 @@ class KartenGUI(Tk):
 
     def highscore(self, nickname, punkte):
         with open("highscore.json", "w") as file:
-            highscore[nickname] = punkte
-            json.dump(highscore, file)
+            data = {}
+            data["highscore"][nickname] = punkte
+            json.dump(data, file, indent = 4)
 
     def getTOP5(self):
-        with open("highscore.json", "r") as file:
-            highscore = json.load(file)
+        with open("db.json", "r") as db:
+            highscore = db["highscore"]
             print("Highscore geladen")
             
             # Convert dictionary to list of tuples (name, score) and sort by score (descending)
@@ -202,10 +202,9 @@ class KartenGUI(Tk):
                 
 
     def staedte_selection(self, anzahl):
+        if isinstance(staedte, dict):
+            staedte = list(staedte.keys())  # convert dict to list of keys
         s = r.sample(staedte, anzahl)
-        # Damit Herr Debray nächstes Mal eine Chance hat ;)
-        if self.has_duplicates(s):
-            return self.staedte_selection(anzahl)
         return s
 
     def punktevergabe(self, x, y, stadt_x, stadt_y) -> int:
@@ -290,16 +289,6 @@ class KartenGUI(Tk):
 
 # ---------------------------------------------------------------------------
 # ✈✈✈ EXECUTION ✈✈✈
-
-if Path("highscore.json").exists():
-    with open("highscore.json", "r") as file:
-        highscore = json.load(file)
-        print("Highscore geladen")
-else:
-    with open("highscore.json", "w") as file:
-        highscore = {}
-        json.dump(highscore, file)
-        print("Highscore-Liste erstellt")
 
 # Erzeuge Fenster
 app = KartenGUI(Datei="DeutschlandFlussKleiner.gif",
