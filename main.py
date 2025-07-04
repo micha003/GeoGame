@@ -213,8 +213,8 @@ class KartenGUI(Tk):
         return False
 
     def staedte_selection(self, anzahl, sl):
-        # Convert dictionary to list of tuples (name, details)
-        staedte_list = list(sl.items())
+        # Convert dictionary to list of tuples (name, details) with hashable tuples
+        staedte_list = [(name, tuple(details)) for name, details in sl.items()]
         sample = r.sample(staedte_list, anzahl)
         if self.has_duplicates(sample):
             print("Duplicates found in the sample.")
@@ -241,8 +241,8 @@ class KartenGUI(Tk):
         self.lblRunde.config(text=f'Runde: {self.aktuelle_runde}')
         self.lblAktuelleStadt.config(text=f'{self.aktuelle_stadt[0]}')
 
-        stadt_x = self.aktuelle_stadt[3]
-        stadt_y = self.aktuelle_stadt[4]
+        stadt_x = self.aktuelle_stadt[1][2]  # longitude from tuple
+        stadt_y = self.aktuelle_stadt[1][3]  # latitude from tuple
 
         clickX = self.canBild.canvasx(event.x)
         clickY = self.canBild.canvasy(event.y)
