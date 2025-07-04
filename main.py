@@ -11,7 +11,7 @@ import random as r
 # math für spezielle trigonometrische Funktionen (Entfernungsberechnung)
 from math import *
 
-# ⛔ IT DOES NOT FOR WORK ⛔
+# it should work now 😃
 with open('db.json', 'r') as file:
     # Read the file contents
     contents = file.read()
