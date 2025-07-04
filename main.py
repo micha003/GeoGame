@@ -67,12 +67,16 @@ class KartenGUI(Tk):
        Gui-Klasse mit Karte u.a.
     """
 
-    def __init__(self, Datei, Fensterbreite=1000, Fensterhoehe=600):
+    def __init__(self,
+                 Datei,
+                 staedteliste,
+                 Fensterbreite=1000,
+                 Fensterhoehe=600):
 
         # ✨✨✨SPIEL-LOGIK✨✨✨
         self.rundenanzahl = 7
         self.punkte = 0
-        self.staedte = self.staedte_selection(self.rundenanzahl)
+        self.staedte = self.staedte_selection(self.rundenanzahl, staedteliste)
         self.aktuelle_runde = 1
 
         # GUI-Definition
@@ -145,67 +149,78 @@ class KartenGUI(Tk):
         with open("highscore.json", "w") as file:
             data = {}
             data["highscore"][nickname] = punkte
-            json.dump(data, file, indent = 4)
+            json.dump(data, file, indent=4)
 
     def getTOP5(self):
         with open("db.json", "r") as db:
             highscore = db["highscore"]
             print("Highscore geladen")
-            
+
             # Convert dictionary to list of tuples (name, score) and sort by score (descending)
-            sorted_scores = sorted(highscore.items(), key=lambda x: x[1], reverse=True)
-            
+            sorted_scores = sorted(highscore.items(),
+                                   key=lambda x: x[1],
+                                   reverse=True)
+
             # Take top 5 (or less if not enough scores)
             top5 = sorted_scores[:5]
-            
+
             return top5
 
     def display_top5(self):
         """Display the top 5 high scores in a new window"""
         top5 = self.getTOP5()
-        
+
         # Create a new window for the high scores
         highscore_window = Toplevel(self)
         highscore_window.title("Top 5 High Scores")
         highscore_window.geometry("300x250")
         highscore_window.resizable(False, False)
-        
+
         # Title label
-        title_label = Label(highscore_window, text="! TOP 5 HIGH SCORES !", 
-                           font=("Arial", 14, "bold"))
+        title_label = Label(highscore_window,
+                            text="! TOP 5 HIGH SCORES !",
+                            font=("Arial", 14, "bold"))
         title_label.pack(pady=10)
-        
+
         # Display each score
         if top5:
             for i, (name, score) in enumerate(top5, 1):
                 score_text = f"{i}. {name}: {score} Punkte"
-                score_label = Label(highscore_window, text=score_text, 
-                                   font=("Arial", 10))
+                score_label = Label(highscore_window,
+                                    text=score_text,
+                                    font=("Arial", 10))
                 score_label.pack(pady=5)
         else:
-            no_scores_label = Label(highscore_window, text="Noch keine Scores vorhanden!", 
-                                   font=("Arial", 10))
+            no_scores_label = Label(highscore_window,
+                                    text="Noch keine Scores vorhanden!",
+                                    font=("Arial", 10))
             no_scores_label.pack(pady=20)
-        
+
         # Close button
-        close_button = Button(highscore_window, text="Schließen", 
-                             command=highscore_window.destroy)
+        close_button = Button(highscore_window,
+                              text="Schließen",
+                              command=highscore_window.destroy)
         close_button.pack(pady=10)
 
-    def has_duplicates(self, l):
+    def has_duplicates(self, items):
         seen = set()
-        for item in l:
-            if item in seen:
-                return True  # Duplicate found
-            seen.add(item)
-        return False  # No duplicates found
-                
+        for item in items:
+            # Convert the item to a tuple if it is a list
+            hashable_item = tuple(item) if isinstance(item, list) else item
+            if hashable_item in seen:
+                return True
+            seen.add(hashable_item)
+        return False
 
-    def staedte_selection(self, anzahl):
-        if isinstance(staedte, dict):
-            staedte = list(staedte.keys())  # convert dict to list of keys
-        s = r.sample(staedte, anzahl)
-        return s
+    def staedte_selection(self, anzahl, sl):
+        # Convert dictionary to list of tuples (name, details)
+        staedte_list = list(sl.items())
+        sample = r.sample(staedte_list, anzahl)
+        if self.has_duplicates(sample):
+            print("Duplicates found in the sample.")
+            return self.staedte_selection(anzahl, sl)
+        print(sample)
+        return sample
 
     def punktevergabe(self, x, y, stadt_x, stadt_y) -> int:
         # Berechnung der Distanz zwischen dem Spielertipp und der tatsächlichen Stadt
@@ -292,6 +307,7 @@ class KartenGUI(Tk):
 
 # Erzeuge Fenster
 app = KartenGUI(Datei="DeutschlandFlussKleiner.gif",
+                staedteliste=staedte,
                 Fensterbreite=600,
                 Fensterhoehe=750)
 app.mainloop()
