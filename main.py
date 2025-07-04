@@ -76,6 +76,8 @@ class KartenGUI(Tk):
         # ✨✨✨SPIEL-LOGIK✨✨✨
         self.rundenanzahl = 7
         self.punkte = 0
+        # Get the difficulty
+        schwierigkeit = self.getDifficulty()
         self.staedte = self.staedte_selection(self.rundenanzahl, staedteliste)
         self.aktuelle_runde = 1
         self.game_ended = False
@@ -130,6 +132,16 @@ class KartenGUI(Tk):
 
     def btnCloseClick(self, event):
         self.destroy()
+
+    # SETUP THE DIFFICULTY
+    def getDifficulty(self):
+        # Create a popup dialog to ask for user input
+        difficulty = simpledialog.askstring(
+            "leicht, mittel, schwer, extrem", "", parent=self)
+        if difficulty not in ["leicht", "mittel", "schwer", "extrem"]:
+            return self.getDifficulty()
+        else:
+            return difficulty
 
 # ---------------------------------------------------------------------------
 # ✨✨✨Spiel-Logik✨✨✨ (part 2 eigentlich)
