@@ -73,6 +73,10 @@ class KartenGUI(Tk):
                  Fensterbreite=1000,
                  Fensterhoehe=600):
 
+        # GUI-Definition
+        # ==============
+        Tk.__init__(self)  # TK-Konstruktor der Vaterklasse aufrufen
+
         # ✨✨✨SPIEL-LOGIK✨✨✨
         self.rundenanzahl = 7
         self.punkte = 0
@@ -81,10 +85,6 @@ class KartenGUI(Tk):
         self.staedte = self.staedte_selection(self.rundenanzahl, staedteliste)
         self.aktuelle_runde = 1
         self.game_ended = False
-
-        # GUI-Definition
-        # ==============
-        Tk.__init__(self)  # TK-Konstruktor der Vaterklasse aufrufen
 
         # Bilddaten
         self.bgBild = PhotoImage(file="%s" % Datei)
