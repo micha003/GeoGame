@@ -138,34 +138,55 @@ class KartenGUI(Tk):
     # SETUP THE DIFFICULTY
     def getDifficulty(self):
         # Create a larger popup dialog to ask for user input
-        root = Toplevel(self)
-        root.title("Schwierigkeit wählen")
-        root.geometry("400x200")
-        root.resizable(False, False)
+        dialog = Toplevel(self)
+        dialog.title("Schwierigkeit wählen")
+        dialog.geometry("400x250")
+        dialog.resizable(False, False)
         
-        # Center the dialog
-        root.grab_set()
-        root.focus_set()
+        # Center the dialog on the main window
+        dialog.transient(self)
+        dialog.grab_set()
         
         result = [None]  # Use list to allow modification in nested function
         
         def on_submit():
             selected = var.get()
-            if selected in ["leicht", "mittel", "schwer", "extrem"]:
-                result[0] = selected
-                root.destroy()
+            result[0] = selected
+            dialog.destroy()
+        
+        def on_cancel():
+            result[0] = "mittel"  # Default value
+            dialog.destroy()
         
         # Create UI elements
-        Label(root, text="Wählen Sie die Schwierigkeit:", font=("Arial", 12)).pack(pady=20)
+        Label(dialog, text="Wählen Sie die Schwierigkeit:", font=("Arial", 14, "bold")).pack(pady=20)
         
         var = StringVar(value="mittel")
         
+        # Create radio buttons with better spacing
         for difficulty in ["leicht", "mittel", "schwer", "extrem"]:
-            Radiobutton(root, text=difficulty, variable=var, value=difficulty, font=("Arial", 10)).pack(pady=5)
+            Radiobutton(dialog, text=difficulty.capitalize(), variable=var, value=difficulty, 
+                       font=("Arial", 12), pady=2).pack(pady=3)
         
-        Button(root, text="OK", command=on_submit, font=("Arial", 10)).pack(pady=20)
+        # Create button frame for better layout
+        button_frame = Frame(dialog)
+        button_frame.pack(pady=20)
         
-        root.wait_window()
+        Button(button_frame, text="OK", command=on_submit, font=("Arial", 12), 
+               bg="lightgreen", width=8).pack(side=LEFT, padx=10)
+        Button(button_frame, text="Abbrechen", command=on_cancel, font=("Arial", 12), 
+               bg="lightcoral", width=8).pack(side=LEFT, padx=10)
+        
+        # Handle window close button
+        dialog.protocol("WM_DELETE_WINDOW", on_cancel)
+        
+        # Center the dialog
+        dialog.update_idletasks()
+        x = (dialog.winfo_screenwidth() // 2) - (dialog.winfo_width() // 2)
+        y = (dialog.winfo_screenheight() // 2) - (dialog.winfo_height() // 2)
+        dialog.geometry(f"+{x}+{y}")
+        
+        dialog.wait_window()
         return result[0] if result[0] else "mittel"
 
 # ---------------------------------------------------------------------------
