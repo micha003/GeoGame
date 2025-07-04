@@ -14,12 +14,12 @@ def getSchwierigkeit(ewz) -> str:
       return "extrem"
     case _ if ewz < 90000:
       return "schwer"
-    case _ if ewz < 150000:
+    case _ if ewz < 180000:
       return "mittel"
-    case _ if ewz < 300000:
+    case _ if ewz >= 180000:
       return "leicht"
     case _:
-      return "sehr_leicht"
+      return ""
 
 
 df = pd.read_csv('ort.csv')
@@ -32,7 +32,6 @@ data = {
         "schwer": {},
         "mittel": {},
         "leicht": {},
-        "sehr_leicht": {}
     }
 }
 

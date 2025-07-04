@@ -1,1148 +1,1153 @@
 {
-    "highscore": {
-        "micha": 22252,
-        "poap": 20591
-    },
+    "highscore": {},
     "staedte": {
-        "Langenhagen": [
-            "Deutschland",
-            50516,
-            9.75,
-            52.45
-        ],
-        "Speyer": [
-            "Deutschland",
-            50600,
-            8.4311,
-            49.3194
-        ],
-        "Passau": [
-            "Deutschland",
-            50798,
-            13.467,
-            48.567
-        ],
-        "Erftstadt": [
-            "Deutschland",
-            51064,
-            6.76,
-            50.81
-        ],
-        "Goslar": [
-            "Deutschland",
-            51128,
-            10.4167,
-            51.9191
-        ],
-        "Emden": [
-            "Deutschland",
-            51470,
-            7.2,
-            53.367
-        ],
-        "Cuxhaven": [
-            "Deutschland",
-            51504,
-            8.69,
-            53.87
-        ],
-        "Ibbenb\u00fcren": [
-            "Deutschland",
-            51581,
-            7.71,
-            52.29
-        ],
-        "Wittenberg": [
-            "Deutschland",
-            51658,
-            12.649,
-            51.876
-        ],
-        "Bergkamen": [
-            "Deutschland",
-            51768,
-            7.63,
-            51.62
-        ],
-        "Wetzlar": [
-            "Deutschland",
-            51908,
-            8.5,
-            50.56
-        ],
-        "Gummersbach": [
-            "Deutschland",
-            51919,
-            7.57,
-            51.04
-        ],
-        "Bad Homburg": [
-            "Deutschland",
-            51945,
-            8.62,
-            50.23
-        ],
-        "Willich": [
-            "Deutschland",
-            52189,
-            6.55,
-            51.27
-        ],
-        "Neu-Ulm": [
-            "Deutschland",
-            52276,
-            10.01,
-            48.4
-        ],
-        "Lingen": [
-            "Deutschland",
-            52289,
-            7.317,
-            52.517
-        ],
-        "Waiblingen": [
-            "Deutschland",
-            53128,
-            9.31,
-            48.83
-        ],
-        "Nordhorn": [
-            "Deutschland",
-            53319,
-            7.06,
-            52.44
-        ],
-        "Pulheim": [
-            "Deutschland",
-            53599,
-            6.8,
-            51.0
-        ],
-        "Greifswald": [
-            "Deutschland",
-            53691,
-            13.39,
-            54.09
-        ],
-        "Meerbusch": [
-            "Deutschland",
-            53866,
-            6.73,
-            51.24
-        ],
-        "Bad Salzuflen": [
-            "Deutschland",
-            53969,
-            8.75,
-            52.09
-        ],
-        "Ahlen": [
-            "Deutschland",
-            54106,
-            7.88,
-            51.77
-        ],
-        "Wolfenb\u00fcttel": [
-            "Deutschland",
-            54730,
-            10.55,
-            52.1667
-        ],
-        "Baden-Baden": [
-            "Deutschland",
-            55423,
-            8.23,
-            48.76
-        ],
-        "Eschweiler": [
-            "Deutschland",
-            55579,
-            6.2833,
-            50.8167
-        ],
-        "Schweinfurt": [
-            "Deutschland",
-            55747,
-            10.233,
-            50.05
-        ],
-        "Euskirchen": [
-            "Deutschland",
-            55879,
-            6.79,
-            50.66
-        ],
-        "Hilden": [
-            "Deutschland",
-            55945,
-            6.93,
-            51.18
-        ],
-        "Hattingen": [
-            "Deutschland",
-            56190,
-            7.18,
-            51.41
-        ],
-        "G\u00f6rlitz": [
-            "Deutschland",
-            56391,
-            14.993,
-            51.156
-        ],
-        "H\u00fcrth": [
-            "Deutschland",
-            56428,
-            6.89,
-            50.89
-        ],
-        "Sankt Augustin": [
-            "Deutschland",
-            56462,
-            7.18,
-            50.78
-        ],
-        "Friedrichshafen": [
-            "Deutschland",
-            56730,
-            9.483,
-            47.65
-        ],
-        "Menden": [
-            "Deutschland",
-            56917,
-            7.79,
-            51.44
-        ],
-        "Unna": [
-            "Deutschland",
-            57158,
-            7.68,
-            51.54
-        ],
-        "G\u00f6ppingen": [
-            "Deutschland",
-            57403,
-            9.66,
-            48.71
-        ],
-        "Frankfurt an der Oder": [
-            "Deutschland",
-            58000,
-            14.545,
-            52.342
-        ],
-        "Neustadt an der Weinstra\u00dfe": [
-            "Deutschland",
-            58300,
-            8.15,
-            49.35
-        ],
-        "Stolberg": [
-            "Deutschland",
-            58489,
-            6.23,
-            50.79
-        ],
-        "Hameln": [
-            "Deutschland",
-            58762,
-            9.35,
-            52.1
-        ],
-        "Offenburg": [
-            "Deutschland",
-            58903,
-            7.95,
-            48.48
-        ],
-        "Rosenheim": [
-            "Deutschland",
-            58908,
-            12.133,
-            47.85
-        ],
-        "Langenfeld": [
-            "Deutschland",
-            58925,
-            6.95,
-            51.11
-        ],
-        "R\u00fcsselsheim": [
-            "Deutschland",
-            59081,
-            8.41,
-            50.0
-        ],
-        "Sindelfingen": [
-            "Deutschland",
-            60595,
-            9.01,
-            48.71
-        ],
-        "Wesel": [
-            "Deutschland",
-            60950,
-            6.62,
-            51.67
-        ],
-        "Schw\u00e4bisch Gm\u00fcnd": [
-            "Deutschland",
-            61391,
-            9.7833,
-            48.8
-        ],
-        "Kempten": [
-            "Deutschland",
-            61606,
-            10.317,
-            47.733
-        ],
-        "Fulda": [
-            "Deutschland",
-            61728,
-            9.683,
-            50.55
-        ],
-        "Garbsen": [
-            "Deutschland",
-            62645,
-            9.59,
-            52.42
-        ],
-        "Bergheim": [
-            "Deutschland",
-            62746,
-            6.65,
-            50.9667
-        ],
-        "Herten": [
-            "Deutschland",
-            63473,
-            7.21,
-            51.59
-        ],
-        "Dormagen": [
-            "Deutschland",
-            63552,
-            6.84,
-            51.08
-        ],
-        "Weimar": [
-            "Deutschland",
-            64206,
-            11.32,
-            50.99
-        ],
-        "Neubrandenburg": [
-            "Deutschland",
-            64259,
-            13.262,
-            53.555
-        ],
-        "Stralsund": [
-            "Deutschland",
-            64385,
-            13.09,
-            54.312
-        ],
-        "Grevenbroich": [
-            "Deutschland",
-            64456,
-            6.57,
-            51.1
-        ],
-        "Kerpen": [
-            "Deutschland",
-            64650,
-            6.69,
-            50.88
-        ],
-        "Herford": [
-            "Deutschland",
-            65255,
-            8.67,
-            52.12
-        ],
-        "Neuwied": [
-            "Deutschland",
-            65300,
-            7.4614,
-            50.4286
-        ],
-        "Aschaffenburg": [
-            "Deutschland",
-            66152,
-            9.15,
-            49.967
-        ],
-        "Aalen": [
-            "Deutschland",
-            66278,
-            10.09,
-            48.85
-        ],
-        "Lippstadt": [
-            "Deutschland",
-            66545,
-            8.34,
-            51.67
-        ],
-        "Plauen": [
-            "Deutschland",
-            67455,
-            12.14,
-            50.5
-        ],
-        "Bamberg": [
-            "Deutschland",
-            68628,
-            10.9,
-            49.9
-        ],
-        "Dinslaken": [
-            "Deutschland",
-            70366,
-            6.73,
-            51.58
-        ],
-        "Landshut": [
-            "Deutschland",
-            71000,
-            12.15,
-            48.533
-        ],
-        "Brandenburg": [
-            "Deutschland",
-            71336,
-            12.552,
-            52.413
-        ],
-        "Norderstedt": [
-            "Deutschland",
-            72144,
-            10.02,
-            53.66
-        ],
-        "L\u00fcneburg": [
-            "Deutschland",
-            72547,
-            10.4,
-            53.25
-        ],
-        "Bayreuth": [
-            "Deutschland",
-            72603,
-            11.58,
-            49.95
-        ],
-        "Bocholt": [
-            "Deutschland",
-            73415,
-            6.61,
-            51.84
-        ],
-        "Celle": [
-            "Deutschland",
-            73559,
-            10.083,
-            52.633
-        ],
-        "Detmold": [
-            "Deutschland",
-            74120,
-            8.88,
-            51.95
-        ],
-        "Delmenhorst": [
-            "Deutschland",
-            74216,
-            8.64,
-            53.06
-        ],
-        "Arnsberg": [
-            "Deutschland",
-            74856,
-            8.06,
-            51.41
-        ],
-        "Troisdorf": [
-            "Deutschland",
-            74965,
-            7.16,
-            50.82
-        ],
-        "Rheine": [
-            "Deutschland",
-            75030,
-            7.45,
-            52.283
-        ],
-        "Viersen": [
-            "Deutschland",
-            75320,
-            6.4,
-            51.26
-        ],
-        "Gladbeck": [
-            "Deutschland",
-            75464,
-            6.98,
-            51.58
-        ],
-        "Castrop-Rauxel": [
-            "Deutschland",
-            76607,
-            7.31,
-            51.55
-        ],
-        "L\u00fcdenscheid": [
-            "Deutschland",
-            76858,
-            7.6,
-            51.23
-        ],
-        "Konstanz": [
-            "Deutschland",
-            76960,
-            9.183,
-            47.667
-        ],
-        "Neum\u00fcnster": [
-            "Deutschland",
-            77631,
-            9.98,
-            54.07
-        ],
-        "Dorsten": [
-            "Deutschland",
-            78256,
-            6.97,
-            51.67
-        ],
-        "Marburg": [
-            "Deutschland",
-            79883,
-            8.77,
-            50.8
-        ],
-        "Worms": [
-            "Deutschland",
-            80535,
-            8.367,
-            49.633
-        ],
-        "Velbert": [
-            "Deutschland",
-            80572,
-            7.04,
-            51.35
-        ],
-        "T\u00fcbingen": [
-            "Deutschland",
-            81911,
-            9.067,
-            48.517
-        ],
-        "Villingen-Schwenningen": [
-            "Deutschland",
-            81945,
-            8.45,
-            48.07
-        ],
-        "Wilhelmshaven": [
-            "Deutschland",
-            82700,
-            8.117,
-            53.517
-        ],
-        "Dessau-Ro\u00dflau": [
-            "Deutschland",
-            83061,
-            12.236,
-            51.835
-        ],
-        "Minden": [
-            "Deutschland",
-            83307,
-            8.917,
-            52.3
-        ],
-        "Marl": [
-            "Deutschland",
-            83527,
-            7.12,
-            51.68
-        ],
-        "Flensburg": [
-            "Deutschland",
-            84694,
-            9.433,
-            54.783
-        ],
-        "L\u00fcnen": [
-            "Deutschland",
-            84783,
-            7.52,
-            51.62
-        ],
-        "Gie\u00dfen": [
-            "Deutschland",
-            87000,
-            8.68,
-            50.58
-        ],
-        "D\u00fcren": [
-            "Deutschland",
-            89024,
-            6.4833,
-            50.81
-        ],
-        "Hanau": [
-            "Deutschland",
-            90934,
-            8.91,
-            50.14
-        ],
-        "Zwickau": [
-            "Deutschland",
-            91066,
-            12.5,
-            50.72
-        ],
-        "Ludwigsburg": [
-            "Deutschland",
-            91116,
-            9.19,
-            48.9
-        ],
-        "Esslingen": [
-            "Deutschland",
-            91158,
-            9.32,
-            48.74
-        ],
-        "Schwerin": [
-            "Deutschland",
-            92138,
-            11.412,
-            53.628
-        ],
-        "Ratingen": [
-            "Deutschland",
-            92488,
-            6.85,
-            51.3
-        ],
-        "Iserlohn": [
-            "Deutschland",
-            92899,
-            7.68,
-            51.39
-        ],
-        "Gera": [
-            "Deutschland",
-            94492,
-            12.08,
-            50.88
-        ],
-        "Witten": [
-            "Deutschland",
-            95907,
-            7.34,
-            51.44
-        ],
-        "G\u00fctersloh": [
-            "Deutschland",
-            96085,
-            8.37,
-            51.91
-        ],
-        "Kaiserslautern": [
-            "Deutschland",
-            97382,
-            7.7689,
-            49.4447
-        ],
-        "Salzgitter": [
-            "Deutschland",
-            98966,
-            10.33,
-            52.17
-        ],
-        "Hildesheim": [
-            "Deutschland",
-            99979,
-            9.95,
-            52.16
-        ],
-        "Siegen": [
-            "Deutschland",
-            100325,
-            8.01,
-            50.87
-        ],
-        "Cottbus": [
-            "Deutschland",
-            101036,
-            14.335,
-            51.766
-        ],
-        "Moers": [
-            "Deutschland",
-            102923,
-            6.65,
-            51.45
-        ],
-        "Erlangen": [
-            "Deutschland",
-            106423,
-            11.01,
-            49.6
-        ],
-        "Trier": [
-            "Deutschland",
-            107233,
-            6.65,
-            49.75
-        ],
-        "Jena": [
-            "Deutschland",
-            108207,
-            11.591,
-            50.933
-        ],
-        "Remscheid": [
-            "Deutschland",
-            109009,
-            7.19,
-            51.18
-        ],
-        "Bergisch Gladbach": [
-            "Deutschland",
-            109697,
-            7.15,
-            50.98
-        ],
-        "Bremerhaven": [
-            "Deutschland",
-            110121,
-            8.583,
-            53.548
-        ],
-        "Koblenz": [
-            "Deutschland",
-            111434,
-            7.6,
-            50.35
-        ],
-        "Reutlingen": [
-            "Deutschland",
-            112452,
-            9.21,
-            48.49
-        ],
-        "Recklinghausen": [
-            "Deutschland",
-            114147,
-            7.19,
-            51.61
-        ],
-        "Bottrop": [
-            "Deutschland",
-            116017,
-            6.93,
-            51.53
-        ],
-        "G\u00f6ttingen": [
-            "Deutschland",
-            117665,
-            9.933,
-            51.533
-        ],
-        "Pforzheim": [
-            "Deutschland",
-            119291,
-            8.69,
-            48.89
-        ],
-        "Heilbronn": [
-            "Deutschland",
-            119841,
-            9.217,
-            49.15
-        ],
-        "Ulm": [
-            "Deutschland",
-            120714,
-            9.983,
-            48.4
-        ],
-        "Offenbach am Main": [
-            "Deutschland",
-            120988,
-            8.694,
-            50.027
-        ],
-        "F\u00fcrth": [
-            "Deutschland",
-            121519,
-            10.98,
-            49.48
-        ],
-        "Wolfsburg": [
-            "Deutschland",
-            123027,
-            10.783,
-            52.417
-        ],
-        "W\u00fcrzburg": [
-            "Deutschland",
-            124219,
-            9.933,
-            49.8
-        ],
-        "Ingolstadt": [
-            "Deutschland",
-            131002,
-            11.433,
-            48.767
-        ],
-        "Regensburg": [
-            "Deutschland",
-            142292,
-            12.1,
-            49.017
-        ],
-        "Paderborn": [
-            "Deutschland",
-            145176,
-            8.74,
-            51.72
-        ],
-        "Darmstadt": [
-            "Deutschland",
-            151879,
-            8.64,
-            49.87
-        ],
-        "Neuss": [
-            "Deutschland",
-            152644,
-            6.69,
-            51.2
-        ],
-        "Herne": [
-            "Deutschland",
-            154608,
-            7.21,
-            51.54
-        ],
-        "Heidelberg": [
-            "Deutschland",
-            154715,
-            8.683,
-            49.4
-        ],
-        "Solingen": [
-            "Deutschland",
-            156771,
-            7.06,
-            51.18
-        ],
-        "Osnabr\u00fcck": [
-            "Deutschland",
-            156897,
-            8.05,
-            52.28
-        ],
-        "Oldenburg": [
-            "Deutschland",
-            160907,
-            8.21,
-            53.15
-        ],
-        "Leverkusen": [
-            "Deutschland",
-            161540,
-            7.0,
-            51.033
-        ],
-        "Ludwigshafen a.R.": [
-            "Deutschland",
-            163832,
-            8.45,
-            49.467
-        ],
-        "Potsdam": [
-            "Deutschland",
-            164042,
-            13.049,
-            52.401
-        ],
-        "M\u00fclheim": [
-            "Deutschland",
-            167108,
-            6.86,
-            51.43
-        ],
-        "Hamm": [
-            "Deutschland",
-            176580,
-            7.8,
-            51.67
-        ],
-        "Saarbr\u00fccken": [
-            "Deutschland",
-            178629,
-            7.0,
-            49.233
-        ],
-        "Hagen": [
-            "Deutschland",
-            186716,
-            7.46,
-            51.37
-        ],
-        "Kassel": [
-            "Deutschland",
-            194747,
-            9.5,
-            51.317
-        ],
-        "Rostock": [
-            "Deutschland",
-            204167,
-            12.125,
-            54.089
-        ],
-        "Erfurt": [
-            "Deutschland",
-            206219,
-            11.022,
-            50.986
-        ],
-        "Mainz": [
-            "Deutschland",
-            206991,
-            8.267,
-            50.0
-        ],
-        "Oberhausen": [
-            "Deutschland",
-            209292,
-            6.86,
-            51.47
-        ],
-        "L\u00fcbeck": [
-            "Deutschland",
-            214420,
-            10.66,
-            53.87
-        ],
-        "Freiburg": [
-            "Deutschland",
-            222203,
-            7.85,
-            47.99
-        ],
-        "Magdeburg": [
-            "Deutschland",
-            232306,
-            11.619,
-            52.122
-        ],
-        "Halle": [
-            "Deutschland",
-            232470,
-            11.966,
-            51.482
-        ],
-        "Krefeld": [
-            "Deutschland",
-            235931,
-            6.55,
-            51.33
-        ],
-        "Kiel": [
-            "Deutschland",
-            243148,
-            10.133,
-            54.333
-        ],
-        "Aachen": [
-            "Deutschland",
-            243336,
-            6.083,
-            50.783
-        ],
-        "Chemnitz": [
-            "Deutschland",
-            243521,
-            12.917,
-            50.83
-        ],
-        "Braunschweig": [
-            "Deutschland",
-            248502,
-            10.51,
-            52.27
-        ],
-        "M\u00f6nchengladbach": [
-            "Deutschland",
-            256853,
-            6.42,
-            51.2
-        ],
-        "Gelsenkirchen": [
-            "Deutschland",
-            257651,
-            7.11,
-            51.51
-        ],
-        "Wiesbaden": [
-            "Deutschland",
-            275116,
-            8.233,
-            50.1
-        ],
-        "Augsburg": [
-            "Deutschland",
-            281111,
-            10.9,
-            48.367
-        ],
-        "Mannheim": [
-            "Deutschland",
-            299844,
-            8.467,
-            49.483
-        ],
-        "Karlsruhe": [
-            "Deutschland",
-            300051,
-            8.3858,
-            49.017
-        ],
-        "M\u00fcnster": [
-            "Deutschland",
-            302178,
-            10.083,
-            52.983
-        ],
-        "Bonn": [
-            "Deutschland",
-            313958,
-            7.1,
-            50.733
-        ],
-        "Bielefeld": [
-            "Deutschland",
-            329782,
-            8.53,
-            52.03
-        ],
-        "Wuppertal": [
-            "Deutschland",
-            345425,
-            7.18,
-            51.26
-        ],
-        "Bochum": [
-            "Deutschland",
-            361876,
-            7.217,
-            51.483
-        ],
-        "Duisburg": [
-            "Deutschland",
-            485465,
-            6.767,
-            51.433
-        ],
-        "N\u00fcrnberg": [
-            "Deutschland",
-            501072,
-            11.083,
-            49.45
-        ],
-        "Hannover": [
-            "Deutschland",
-            523642,
-            9.733,
-            52.383
-        ],
-        "Dresden": [
-            "Deutschland",
-            536308,
-            13.739,
-            51.05
-        ],
-        "Leipzig": [
-            "Deutschland",
-            544479,
-            12.377,
-            51.339
-        ],
-        "Bremen": [
-            "Deutschland",
-            551767,
-            8.817,
-            53.083
-        ],
-        "Essen": [
-            "Deutschland",
-            583393,
-            7.017,
-            51.467
-        ],
-        "Dortmund": [
-            "Deutschland",
-            586600,
-            7.467,
-            51.517
-        ],
-        "D\u00fcsseldorf": [
-            "Deutschland",
-            617280,
-            6.783,
-            51.233
-        ],
-        "Stuttgart": [
-            "Deutschland",
-            632743,
-            9.183,
-            48.783
-        ],
-        "Frankfurt am Main": [
-            "Deutschland",
-            746878,
-            8.683,
-            50.117
-        ],
-        "K\u00f6ln": [
-            "Deutschland",
-            1080394,
-            6.95,
-            50.95
-        ],
-        "M\u00fcnchen": [
-            "Deutschland",
-            1456039,
-            11.567,
-            48.133
-        ],
-        "Hamburg": [
-            "Deutschland",
-            1830584,
-            10.033,
-            53.567
-        ],
-        "Berlin": [
-            "Deutschland",
-            3613495,
-            13.413,
-            52.523
-        ]
+        "extrem": {
+            "Langenhagen": [
+                "Deutschland",
+                50516,
+                9.75,
+                52.45
+            ],
+            "Speyer": [
+                "Deutschland",
+                50600,
+                8.4311,
+                49.3194
+            ],
+            "Passau": [
+                "Deutschland",
+                50798,
+                13.467,
+                48.567
+            ],
+            "Erftstadt": [
+                "Deutschland",
+                51064,
+                6.76,
+                50.81
+            ],
+            "Goslar": [
+                "Deutschland",
+                51128,
+                10.4167,
+                51.9191
+            ],
+            "Emden": [
+                "Deutschland",
+                51470,
+                7.2,
+                53.367
+            ],
+            "Cuxhaven": [
+                "Deutschland",
+                51504,
+                8.69,
+                53.87
+            ],
+            "Ibbenb\u00fcren": [
+                "Deutschland",
+                51581,
+                7.71,
+                52.29
+            ],
+            "Wittenberg": [
+                "Deutschland",
+                51658,
+                12.649,
+                51.876
+            ],
+            "Bergkamen": [
+                "Deutschland",
+                51768,
+                7.63,
+                51.62
+            ],
+            "Wetzlar": [
+                "Deutschland",
+                51908,
+                8.5,
+                50.56
+            ],
+            "Gummersbach": [
+                "Deutschland",
+                51919,
+                7.57,
+                51.04
+            ],
+            "Bad Homburg": [
+                "Deutschland",
+                51945,
+                8.62,
+                50.23
+            ],
+            "Willich": [
+                "Deutschland",
+                52189,
+                6.55,
+                51.27
+            ],
+            "Neu-Ulm": [
+                "Deutschland",
+                52276,
+                10.01,
+                48.4
+            ],
+            "Lingen": [
+                "Deutschland",
+                52289,
+                7.317,
+                52.517
+            ],
+            "Waiblingen": [
+                "Deutschland",
+                53128,
+                9.31,
+                48.83
+            ],
+            "Nordhorn": [
+                "Deutschland",
+                53319,
+                7.06,
+                52.44
+            ],
+            "Pulheim": [
+                "Deutschland",
+                53599,
+                6.8,
+                51.0
+            ],
+            "Greifswald": [
+                "Deutschland",
+                53691,
+                13.39,
+                54.09
+            ],
+            "Meerbusch": [
+                "Deutschland",
+                53866,
+                6.73,
+                51.24
+            ],
+            "Bad Salzuflen": [
+                "Deutschland",
+                53969,
+                8.75,
+                52.09
+            ],
+            "Ahlen": [
+                "Deutschland",
+                54106,
+                7.88,
+                51.77
+            ],
+            "Wolfenb\u00fcttel": [
+                "Deutschland",
+                54730,
+                10.55,
+                52.1667
+            ],
+            "Baden-Baden": [
+                "Deutschland",
+                55423,
+                8.23,
+                48.76
+            ],
+            "Eschweiler": [
+                "Deutschland",
+                55579,
+                6.2833,
+                50.8167
+            ],
+            "Schweinfurt": [
+                "Deutschland",
+                55747,
+                10.233,
+                50.05
+            ],
+            "Euskirchen": [
+                "Deutschland",
+                55879,
+                6.79,
+                50.66
+            ],
+            "Hilden": [
+                "Deutschland",
+                55945,
+                6.93,
+                51.18
+            ],
+            "Hattingen": [
+                "Deutschland",
+                56190,
+                7.18,
+                51.41
+            ],
+            "G\u00f6rlitz": [
+                "Deutschland",
+                56391,
+                14.993,
+                51.156
+            ],
+            "H\u00fcrth": [
+                "Deutschland",
+                56428,
+                6.89,
+                50.89
+            ],
+            "Sankt Augustin": [
+                "Deutschland",
+                56462,
+                7.18,
+                50.78
+            ],
+            "Friedrichshafen": [
+                "Deutschland",
+                56730,
+                9.483,
+                47.65
+            ],
+            "Menden": [
+                "Deutschland",
+                56917,
+                7.79,
+                51.44
+            ],
+            "Unna": [
+                "Deutschland",
+                57158,
+                7.68,
+                51.54
+            ],
+            "G\u00f6ppingen": [
+                "Deutschland",
+                57403,
+                9.66,
+                48.71
+            ],
+            "Frankfurt an der Oder": [
+                "Deutschland",
+                58000,
+                14.545,
+                52.342
+            ],
+            "Neustadt an der Weinstra\u00dfe": [
+                "Deutschland",
+                58300,
+                8.15,
+                49.35
+            ],
+            "Stolberg": [
+                "Deutschland",
+                58489,
+                6.23,
+                50.79
+            ],
+            "Hameln": [
+                "Deutschland",
+                58762,
+                9.35,
+                52.1
+            ],
+            "Offenburg": [
+                "Deutschland",
+                58903,
+                7.95,
+                48.48
+            ],
+            "Rosenheim": [
+                "Deutschland",
+                58908,
+                12.133,
+                47.85
+            ],
+            "Langenfeld": [
+                "Deutschland",
+                58925,
+                6.95,
+                51.11
+            ],
+            "R\u00fcsselsheim": [
+                "Deutschland",
+                59081,
+                8.41,
+                50.0
+            ],
+            "Sindelfingen": [
+                "Deutschland",
+                60595,
+                9.01,
+                48.71
+            ],
+            "Wesel": [
+                "Deutschland",
+                60950,
+                6.62,
+                51.67
+            ],
+            "Schw\u00e4bisch Gm\u00fcnd": [
+                "Deutschland",
+                61391,
+                9.7833,
+                48.8
+            ],
+            "Kempten": [
+                "Deutschland",
+                61606,
+                10.317,
+                47.733
+            ],
+            "Fulda": [
+                "Deutschland",
+                61728,
+                9.683,
+                50.55
+            ],
+            "Garbsen": [
+                "Deutschland",
+                62645,
+                9.59,
+                52.42
+            ],
+            "Bergheim": [
+                "Deutschland",
+                62746,
+                6.65,
+                50.9667
+            ],
+            "Herten": [
+                "Deutschland",
+                63473,
+                7.21,
+                51.59
+            ],
+            "Dormagen": [
+                "Deutschland",
+                63552,
+                6.84,
+                51.08
+            ],
+            "Weimar": [
+                "Deutschland",
+                64206,
+                11.32,
+                50.99
+            ],
+            "Neubrandenburg": [
+                "Deutschland",
+                64259,
+                13.262,
+                53.555
+            ],
+            "Stralsund": [
+                "Deutschland",
+                64385,
+                13.09,
+                54.312
+            ],
+            "Grevenbroich": [
+                "Deutschland",
+                64456,
+                6.57,
+                51.1
+            ],
+            "Kerpen": [
+                "Deutschland",
+                64650,
+                6.69,
+                50.88
+            ]
+        },
+        "schwer": {
+            "Herford": [
+                "Deutschland",
+                65255,
+                8.67,
+                52.12
+            ],
+            "Neuwied": [
+                "Deutschland",
+                65300,
+                7.4614,
+                50.4286
+            ],
+            "Aschaffenburg": [
+                "Deutschland",
+                66152,
+                9.15,
+                49.967
+            ],
+            "Aalen": [
+                "Deutschland",
+                66278,
+                10.09,
+                48.85
+            ],
+            "Lippstadt": [
+                "Deutschland",
+                66545,
+                8.34,
+                51.67
+            ],
+            "Plauen": [
+                "Deutschland",
+                67455,
+                12.14,
+                50.5
+            ],
+            "Bamberg": [
+                "Deutschland",
+                68628,
+                10.9,
+                49.9
+            ],
+            "Dinslaken": [
+                "Deutschland",
+                70366,
+                6.73,
+                51.58
+            ],
+            "Landshut": [
+                "Deutschland",
+                71000,
+                12.15,
+                48.533
+            ],
+            "Brandenburg": [
+                "Deutschland",
+                71336,
+                12.552,
+                52.413
+            ],
+            "Norderstedt": [
+                "Deutschland",
+                72144,
+                10.02,
+                53.66
+            ],
+            "L\u00fcneburg": [
+                "Deutschland",
+                72547,
+                10.4,
+                53.25
+            ],
+            "Bayreuth": [
+                "Deutschland",
+                72603,
+                11.58,
+                49.95
+            ],
+            "Bocholt": [
+                "Deutschland",
+                73415,
+                6.61,
+                51.84
+            ],
+            "Celle": [
+                "Deutschland",
+                73559,
+                10.083,
+                52.633
+            ],
+            "Detmold": [
+                "Deutschland",
+                74120,
+                8.88,
+                51.95
+            ],
+            "Delmenhorst": [
+                "Deutschland",
+                74216,
+                8.64,
+                53.06
+            ],
+            "Arnsberg": [
+                "Deutschland",
+                74856,
+                8.06,
+                51.41
+            ],
+            "Troisdorf": [
+                "Deutschland",
+                74965,
+                7.16,
+                50.82
+            ],
+            "Rheine": [
+                "Deutschland",
+                75030,
+                7.45,
+                52.283
+            ],
+            "Viersen": [
+                "Deutschland",
+                75320,
+                6.4,
+                51.26
+            ],
+            "Gladbeck": [
+                "Deutschland",
+                75464,
+                6.98,
+                51.58
+            ],
+            "Castrop-Rauxel": [
+                "Deutschland",
+                76607,
+                7.31,
+                51.55
+            ],
+            "L\u00fcdenscheid": [
+                "Deutschland",
+                76858,
+                7.6,
+                51.23
+            ],
+            "Konstanz": [
+                "Deutschland",
+                76960,
+                9.183,
+                47.667
+            ],
+            "Neum\u00fcnster": [
+                "Deutschland",
+                77631,
+                9.98,
+                54.07
+            ],
+            "Dorsten": [
+                "Deutschland",
+                78256,
+                6.97,
+                51.67
+            ],
+            "Marburg": [
+                "Deutschland",
+                79883,
+                8.77,
+                50.8
+            ],
+            "Worms": [
+                "Deutschland",
+                80535,
+                8.367,
+                49.633
+            ],
+            "Velbert": [
+                "Deutschland",
+                80572,
+                7.04,
+                51.35
+            ],
+            "T\u00fcbingen": [
+                "Deutschland",
+                81911,
+                9.067,
+                48.517
+            ],
+            "Villingen-Schwenningen": [
+                "Deutschland",
+                81945,
+                8.45,
+                48.07
+            ],
+            "Wilhelmshaven": [
+                "Deutschland",
+                82700,
+                8.117,
+                53.517
+            ],
+            "Dessau-Ro\u00dflau": [
+                "Deutschland",
+                83061,
+                12.236,
+                51.835
+            ],
+            "Minden": [
+                "Deutschland",
+                83307,
+                8.917,
+                52.3
+            ],
+            "Marl": [
+                "Deutschland",
+                83527,
+                7.12,
+                51.68
+            ],
+            "Flensburg": [
+                "Deutschland",
+                84694,
+                9.433,
+                54.783
+            ],
+            "L\u00fcnen": [
+                "Deutschland",
+                84783,
+                7.52,
+                51.62
+            ],
+            "Gie\u00dfen": [
+                "Deutschland",
+                87000,
+                8.68,
+                50.58
+            ],
+            "D\u00fcren": [
+                "Deutschland",
+                89024,
+                6.4833,
+                50.81
+            ]
+        },
+        "mittel": {
+            "Hanau": [
+                "Deutschland",
+                90934,
+                8.91,
+                50.14
+            ],
+            "Zwickau": [
+                "Deutschland",
+                91066,
+                12.5,
+                50.72
+            ],
+            "Ludwigsburg": [
+                "Deutschland",
+                91116,
+                9.19,
+                48.9
+            ],
+            "Esslingen": [
+                "Deutschland",
+                91158,
+                9.32,
+                48.74
+            ],
+            "Schwerin": [
+                "Deutschland",
+                92138,
+                11.412,
+                53.628
+            ],
+            "Ratingen": [
+                "Deutschland",
+                92488,
+                6.85,
+                51.3
+            ],
+            "Iserlohn": [
+                "Deutschland",
+                92899,
+                7.68,
+                51.39
+            ],
+            "Gera": [
+                "Deutschland",
+                94492,
+                12.08,
+                50.88
+            ],
+            "Witten": [
+                "Deutschland",
+                95907,
+                7.34,
+                51.44
+            ],
+            "G\u00fctersloh": [
+                "Deutschland",
+                96085,
+                8.37,
+                51.91
+            ],
+            "Kaiserslautern": [
+                "Deutschland",
+                97382,
+                7.7689,
+                49.4447
+            ],
+            "Salzgitter": [
+                "Deutschland",
+                98966,
+                10.33,
+                52.17
+            ],
+            "Hildesheim": [
+                "Deutschland",
+                99979,
+                9.95,
+                52.16
+            ],
+            "Siegen": [
+                "Deutschland",
+                100325,
+                8.01,
+                50.87
+            ],
+            "Cottbus": [
+                "Deutschland",
+                101036,
+                14.335,
+                51.766
+            ],
+            "Moers": [
+                "Deutschland",
+                102923,
+                6.65,
+                51.45
+            ],
+            "Erlangen": [
+                "Deutschland",
+                106423,
+                11.01,
+                49.6
+            ],
+            "Trier": [
+                "Deutschland",
+                107233,
+                6.65,
+                49.75
+            ],
+            "Jena": [
+                "Deutschland",
+                108207,
+                11.591,
+                50.933
+            ],
+            "Remscheid": [
+                "Deutschland",
+                109009,
+                7.19,
+                51.18
+            ],
+            "Bergisch Gladbach": [
+                "Deutschland",
+                109697,
+                7.15,
+                50.98
+            ],
+            "Bremerhaven": [
+                "Deutschland",
+                110121,
+                8.583,
+                53.548
+            ],
+            "Koblenz": [
+                "Deutschland",
+                111434,
+                7.6,
+                50.35
+            ],
+            "Reutlingen": [
+                "Deutschland",
+                112452,
+                9.21,
+                48.49
+            ],
+            "Recklinghausen": [
+                "Deutschland",
+                114147,
+                7.19,
+                51.61
+            ],
+            "Bottrop": [
+                "Deutschland",
+                116017,
+                6.93,
+                51.53
+            ],
+            "G\u00f6ttingen": [
+                "Deutschland",
+                117665,
+                9.933,
+                51.533
+            ],
+            "Pforzheim": [
+                "Deutschland",
+                119291,
+                8.69,
+                48.89
+            ],
+            "Heilbronn": [
+                "Deutschland",
+                119841,
+                9.217,
+                49.15
+            ],
+            "Ulm": [
+                "Deutschland",
+                120714,
+                9.983,
+                48.4
+            ],
+            "Offenbach am Main": [
+                "Deutschland",
+                120988,
+                8.694,
+                50.027
+            ],
+            "F\u00fcrth": [
+                "Deutschland",
+                121519,
+                10.98,
+                49.48
+            ],
+            "Wolfsburg": [
+                "Deutschland",
+                123027,
+                10.783,
+                52.417
+            ],
+            "W\u00fcrzburg": [
+                "Deutschland",
+                124219,
+                9.933,
+                49.8
+            ],
+            "Ingolstadt": [
+                "Deutschland",
+                131002,
+                11.433,
+                48.767
+            ],
+            "Regensburg": [
+                "Deutschland",
+                142292,
+                12.1,
+                49.017
+            ],
+            "Paderborn": [
+                "Deutschland",
+                145176,
+                8.74,
+                51.72
+            ],
+            "Darmstadt": [
+                "Deutschland",
+                151879,
+                8.64,
+                49.87
+            ],
+            "Neuss": [
+                "Deutschland",
+                152644,
+                6.69,
+                51.2
+            ],
+            "Herne": [
+                "Deutschland",
+                154608,
+                7.21,
+                51.54
+            ],
+            "Heidelberg": [
+                "Deutschland",
+                154715,
+                8.683,
+                49.4
+            ],
+            "Solingen": [
+                "Deutschland",
+                156771,
+                7.06,
+                51.18
+            ],
+            "Osnabr\u00fcck": [
+                "Deutschland",
+                156897,
+                8.05,
+                52.28
+            ],
+            "Oldenburg": [
+                "Deutschland",
+                160907,
+                8.21,
+                53.15
+            ],
+            "Leverkusen": [
+                "Deutschland",
+                161540,
+                7.0,
+                51.033
+            ],
+            "Ludwigshafen a.R.": [
+                "Deutschland",
+                163832,
+                8.45,
+                49.467
+            ],
+            "Potsdam": [
+                "Deutschland",
+                164042,
+                13.049,
+                52.401
+            ],
+            "M\u00fclheim": [
+                "Deutschland",
+                167108,
+                6.86,
+                51.43
+            ],
+            "Hamm": [
+                "Deutschland",
+                176580,
+                7.8,
+                51.67
+            ],
+            "Saarbr\u00fccken": [
+                "Deutschland",
+                178629,
+                7.0,
+                49.233
+            ]
+        },
+        "leicht": {
+            "Hagen": [
+                "Deutschland",
+                186716,
+                7.46,
+                51.37
+            ],
+            "Kassel": [
+                "Deutschland",
+                194747,
+                9.5,
+                51.317
+            ],
+            "Rostock": [
+                "Deutschland",
+                204167,
+                12.125,
+                54.089
+            ],
+            "Erfurt": [
+                "Deutschland",
+                206219,
+                11.022,
+                50.986
+            ],
+            "Mainz": [
+                "Deutschland",
+                206991,
+                8.267,
+                50.0
+            ],
+            "Oberhausen": [
+                "Deutschland",
+                209292,
+                6.86,
+                51.47
+            ],
+            "L\u00fcbeck": [
+                "Deutschland",
+                214420,
+                10.66,
+                53.87
+            ],
+            "Freiburg": [
+                "Deutschland",
+                222203,
+                7.85,
+                47.99
+            ],
+            "Magdeburg": [
+                "Deutschland",
+                232306,
+                11.619,
+                52.122
+            ],
+            "Halle": [
+                "Deutschland",
+                232470,
+                11.966,
+                51.482
+            ],
+            "Krefeld": [
+                "Deutschland",
+                235931,
+                6.55,
+                51.33
+            ],
+            "Kiel": [
+                "Deutschland",
+                243148,
+                10.133,
+                54.333
+            ],
+            "Aachen": [
+                "Deutschland",
+                243336,
+                6.083,
+                50.783
+            ],
+            "Chemnitz": [
+                "Deutschland",
+                243521,
+                12.917,
+                50.83
+            ],
+            "Braunschweig": [
+                "Deutschland",
+                248502,
+                10.51,
+                52.27
+            ],
+            "M\u00f6nchengladbach": [
+                "Deutschland",
+                256853,
+                6.42,
+                51.2
+            ],
+            "Gelsenkirchen": [
+                "Deutschland",
+                257651,
+                7.11,
+                51.51
+            ],
+            "Wiesbaden": [
+                "Deutschland",
+                275116,
+                8.233,
+                50.1
+            ],
+            "Augsburg": [
+                "Deutschland",
+                281111,
+                10.9,
+                48.367
+            ],
+            "Mannheim": [
+                "Deutschland",
+                299844,
+                8.467,
+                49.483
+            ],
+            "Karlsruhe": [
+                "Deutschland",
+                300051,
+                8.3858,
+                49.017
+            ],
+            "M\u00fcnster": [
+                "Deutschland",
+                302178,
+                10.083,
+                52.983
+            ],
+            "Bonn": [
+                "Deutschland",
+                313958,
+                7.1,
+                50.733
+            ],
+            "Bielefeld": [
+                "Deutschland",
+                329782,
+                8.53,
+                52.03
+            ],
+            "Wuppertal": [
+                "Deutschland",
+                345425,
+                7.18,
+                51.26
+            ],
+            "Bochum": [
+                "Deutschland",
+                361876,
+                7.217,
+                51.483
+            ],
+            "Duisburg": [
+                "Deutschland",
+                485465,
+                6.767,
+                51.433
+            ],
+            "N\u00fcrnberg": [
+                "Deutschland",
+                501072,
+                11.083,
+                49.45
+            ],
+            "Hannover": [
+                "Deutschland",
+                523642,
+                9.733,
+                52.383
+            ],
+            "Dresden": [
+                "Deutschland",
+                536308,
+                13.739,
+                51.05
+            ],
+            "Leipzig": [
+                "Deutschland",
+                544479,
+                12.377,
+                51.339
+            ],
+            "Bremen": [
+                "Deutschland",
+                551767,
+                8.817,
+                53.083
+            ],
+            "Essen": [
+                "Deutschland",
+                583393,
+                7.017,
+                51.467
+            ],
+            "Dortmund": [
+                "Deutschland",
+                586600,
+                7.467,
+                51.517
+            ],
+            "D\u00fcsseldorf": [
+                "Deutschland",
+                617280,
+                6.783,
+                51.233
+            ],
+            "Stuttgart": [
+                "Deutschland",
+                632743,
+                9.183,
+                48.783
+            ],
+            "Frankfurt am Main": [
+                "Deutschland",
+                746878,
+                8.683,
+                50.117
+            ],
+            "K\u00f6ln": [
+                "Deutschland",
+                1080394,
+                6.95,
+                50.95
+            ],
+            "M\u00fcnchen": [
+                "Deutschland",
+                1456039,
+                11.567,
+                48.133
+            ],
+            "Hamburg": [
+                "Deutschland",
+                1830584,
+                10.033,
+                53.567
+            ],
+            "Berlin": [
+                "Deutschland",
+                3613495,
+                13.413,
+                52.523
+            ]
+        }
     }
 }
