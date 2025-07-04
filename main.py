@@ -82,7 +82,9 @@ class KartenGUI(Tk):
         self.punkte = 0
         # Get the difficulty
         schwierigkeit = self.getDifficulty()
-        self.staedte = self.staedte_selection(self.rundenanzahl, staedteliste)
+        # Filter cities by difficulty
+        filtered_cities = staedteliste.get(schwierigkeit, {})
+        self.staedte = self.staedte_selection(self.rundenanzahl, filtered_cities)
         self.aktuelle_runde = 1
         self.game_ended = False
 
@@ -135,13 +137,36 @@ class KartenGUI(Tk):
 
     # SETUP THE DIFFICULTY
     def getDifficulty(self):
-        # Create a popup dialog to ask for user input
-        difficulty = simpledialog.askstring(
-            "leicht, mittel, schwer, extrem", "", parent=self)
-        if difficulty not in ["leicht", "mittel", "schwer", "extrem"]:
-            return self.getDifficulty()
-        else:
-            return difficulty
+        # Create a larger popup dialog to ask for user input
+        root = Toplevel(self)
+        root.title("Schwierigkeit wählen")
+        root.geometry("400x200")
+        root.resizable(False, False)
+        
+        # Center the dialog
+        root.grab_set()
+        root.focus_set()
+        
+        result = [None]  # Use list to allow modification in nested function
+        
+        def on_submit():
+            selected = var.get()
+            if selected in ["leicht", "mittel", "schwer", "extrem"]:
+                result[0] = selected
+                root.destroy()
+        
+        # Create UI elements
+        Label(root, text="Wählen Sie die Schwierigkeit:", font=("Arial", 12)).pack(pady=20)
+        
+        var = StringVar(value="mittel")
+        
+        for difficulty in ["leicht", "mittel", "schwer", "extrem"]:
+            Radiobutton(root, text=difficulty, variable=var, value=difficulty, font=("Arial", 10)).pack(pady=5)
+        
+        Button(root, text="OK", command=on_submit, font=("Arial", 10)).pack(pady=20)
+        
+        root.wait_window()
+        return result[0] if result[0] else "mittel"
 
 # ---------------------------------------------------------------------------
 # ✨✨✨Spiel-Logik✨✨✨ (part 2 eigentlich)
