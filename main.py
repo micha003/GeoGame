@@ -140,7 +140,7 @@ class KartenGUI(Tk):
         # Create a larger popup dialog to ask for user input
         dialog = Toplevel(self)
         dialog.title("Schwierigkeit wählen")
-        dialog.geometry("400x250")
+        dialog.geometry("500x350")
         dialog.resizable(False, False)
         
         # Center the dialog on the main window
