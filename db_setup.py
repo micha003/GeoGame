@@ -1,3 +1,4 @@
+
 # ---------------------------------------------------------------------
 #
 # This script needs to be executed before playing the game for the first time
@@ -18,12 +19,23 @@ def getSchwierigkeit(ewz) -> str:
     case _ if ewz < 300000:
       return "leicht"
     case _:
-      exit(777)
+      return "sehr_leicht"
 
 
 df = pd.read_csv('ort.csv')
 
-data = {"highscore": {}, "staedte": {}}
+# Initialize the data structure with empty dictionaries for each difficulty level
+data = {
+    "highscore": {}, 
+    "staedte": {
+        "extrem": {},
+        "schwer": {},
+        "mittel": {},
+        "leicht": {},
+        "sehr_leicht": {}
+    }
+}
+
 for index, row in df.iterrows():
   name = row['Name']  # Replace 'city' with the actual column name in your CSV
   land = row['Land']  # Replace 'value' with the actual column name in your CSV
@@ -35,7 +47,7 @@ for index, row in df.iterrows():
 
 print(data)
 
-with open('./db.json', 'r+') as f:
+with open('./db.json', 'w') as f:
   json.dump(data, f, indent=4)
 
 print("Finished inserting cities into db.json. READY TO PLAY!")
