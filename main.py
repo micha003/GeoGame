@@ -78,6 +78,7 @@ class KartenGUI(Tk):
         self.punkte = 0
         self.staedte = self.staedte_selection(self.rundenanzahl, staedteliste)
         self.aktuelle_runde = 1
+        self.game_ended = False
 
         # GUI-Definition
         # ==============
@@ -146,25 +147,39 @@ class KartenGUI(Tk):
             exit(-1)
 
     def highscore(self, nickname, punkte):
-        with open("highscore.json", "w") as file:
-            data = {}
-            data["highscore"][nickname] = punkte
+        # Load existing data from db.json
+        try:
+            with open("db.json", "r") as file:
+                data = json.load(file)
+        except FileNotFoundError:
+            data = {"highscore": {}, "staedte": {}}
+        
+        # Add new score
+        data["highscore"][nickname] = punkte
+        
+        # Save back to db.json
+        with open("db.json", "w") as file:
             json.dump(data, file, indent=4)
 
     def getTOP5(self):
-        with open("db.json", "r") as db:
-            highscore = db["highscore"]
-            print("Highscore geladen")
+        try:
+            with open("db.json", "r") as db_file:
+                data = json.load(db_file)
+                highscore = data.get("highscore", {})
+                print("Highscore geladen")
 
-            # Convert dictionary to list of tuples (name, score) and sort by score (descending)
-            sorted_scores = sorted(highscore.items(),
-                                   key=lambda x: x[1],
-                                   reverse=True)
+                # Convert dictionary to list of tuples (name, score) and sort by score (descending)
+                sorted_scores = sorted(highscore.items(),
+                                       key=lambda x: x[1],
+                                       reverse=True)
 
-            # Take top 5 (or less if not enough scores)
-            top5 = sorted_scores[:5]
+                # Take top 5 (or less if not enough scores)
+                top5 = sorted_scores[:5]
 
-            return top5
+                return top5
+        except (FileNotFoundError, json.JSONDecodeError):
+            print("No highscore data found")
+            return []
 
     def display_top5(self):
         """Display the top 5 high scores in a new window"""
@@ -235,6 +250,15 @@ class KartenGUI(Tk):
     """
 
     def btnKlick(self, event):
+        # Check if game has already ended
+        if self.game_ended:
+            return
+        
+        # Check if we still have cities left
+        if self.aktuelle_runde > self.rundenanzahl:
+            self.end_game()
+            return
+            
         self.aktuelle_stadt = self.staedte[self.aktuelle_runde - 1]
 
         # Update label text instead of creating new labels
@@ -291,15 +315,21 @@ class KartenGUI(Tk):
             next_city = self.staedte[self.aktuelle_runde - 1]
             self.lblAktuelleStadt.config(text=f'{next_city[0]}')
             self.lblRunde.config(text=f'Runde: {self.aktuelle_runde}')
+        else:
+            # Game is over
+            self.end_game()
 
-        # Check if game is over
-        if self.aktuelle_runde > self.rundenanzahl:
-            print(f"Spiel beendet! Endpunktestand: {self.punkte}")
-            self.nickname = self.ask_username()
-            self.highscore(self.nickname, self.punkte)
-            self.display_top5()
-
+    def end_game(self):
+        """End the game and show highscore board"""
+        if self.game_ended:
             return
+        
+        self.game_ended = True
+        print(f"Spiel beendet! Endpunktestand: {self.punkte}")
+        self.lblAktuelleStadt.config(text="Spiel beendet!")
+        self.nickname = self.ask_username()
+        self.highscore(self.nickname, self.punkte)
+        self.display_top5()
 
 
 # ---------------------------------------------------------------------------
