@@ -22,6 +22,7 @@ db = json.loads(contents)
 staedte = db["staedte"]
 highscore = db["highscore"]
 
+# Konstanten für Umrechnung von Koordinaten
 cNord = 55.1
 cSued = 47.2
 cWest = 5.5

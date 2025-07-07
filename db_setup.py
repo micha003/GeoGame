@@ -22,6 +22,7 @@ def getSchwierigkeit(ewz) -> str:
       return ""
 
 
+# Auslesen der csv-Datei
 df = pd.read_csv('ort.csv')
 
 # Initialize the data structure with empty dictionaries for each difficulty level
@@ -36,8 +37,8 @@ data = {
 }
 
 for index, row in df.iterrows():
-  name = row['Name']  # Replace 'city' with the actual column name in your CSV
-  land = row['Land']  # Replace 'value' with the actual column name in your CSV
+  name = row['Name']
+  land = row['Land'] 
   ewz = row['Einwohner']
   laenge = row['Laenge']
   breite = row['Breite']
