@@ -330,9 +330,9 @@ class KartenGUI(Tk):
 # ---------------------------------------------------------------------------
 # ✨✨✨Spiel-Logik✨✨✨ (part 2 eigentlich)
 
-    def ask_username(self, prompt="Spitzname"):
+    def ask_username(self):
         # Create a popup dialog to ask for user input
-        user_input = simpledialog.askstring("Spielername", f"{prompt} eingeben:")
+        user_input = simpledialog.askstring("Spielername", f"Spitzname eingeben:")
 
         # Check if the user provided input
         if user_input is not None:
