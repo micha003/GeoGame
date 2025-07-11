@@ -93,7 +93,7 @@ Die Klasse erbt bereits von der Klasse Tk und hat alle Methoden zur Verfügung, 
 |`update_player_display`|_keine_|_keine_|Hier wird immer die Anzeige für den aktuellen Spieler und die Punkteanzahl aktualisiert in der GUI.|
 |`getGameMode`|_keine_|Spielmodus als `str`|Diese Methode dient der Darstellung des Eingabedialogs bei der GUI und um den Spielmodus zu ermitteln für die bevorstehende Runde.|
 |`getDifficulty`|_keine_|Schwierigkeitsgrad als `str`|Diese Methode dient der Darstellung des Eingabedialogs bei der GUI und um den Schwierigkeitsgrad zu ermitteln für die bevorstehende Runde.|
-|`ask_username`|_keine_|_entweder_ Spitzname als String _oder_ Beendung des Programms|Diese Methode fragt den Spieler mithilfe eines Dialogs nach dem Spitznamen für das bevorstehende Spiel.|
+|`ask_username`|_prompt_: String für Anzeige in Eingabefeld im Dialogfenster|_entweder_ Spitzname als String _oder_ Beendung des Programms|Diese Methode fragt den Spieler mithilfe eines Dialogs nach dem Spitznamen für das bevorstehende Spiel.|
 |`highscore`|_nickname_: Spitzname (str), _punkte_: Puntzahl (int)|_keine_|Hier werden die in einer Runde erreichten Punkte in die JSON-Datei gespeichert.|
 |`getTop10`|_keine_|Liste mit den zehn besten Punktzahlen inkl. der zugehörigen Nutzernamen|
 |`display_top10`|_keine_|_keine_|Die zuvor ermittelten zehn besten Punktzahlen werden beim Aufruf der Funktion (nach Spielende) im Fenster angezeigt|
